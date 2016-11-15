@@ -1,0 +1,34 @@
+<core:FragmentDefinition
+        xmlns:l="sap.ui.layout"
+        xmlns:me="sap.me"
+        xmlns:core      = "sap.ui.core"
+        xmlns:u     =   "sap.ui.unified"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m">
+    
+                 
+            <l:VerticalLayout class="sapUiSmallMargin">
+                <me:Calendar selectionMode="SINGLE"
+                             tapOnDate="onTapOnDate"
+                             changeRange="onChangeRange"
+                             width="100%"
+                             id = "selectionCalendar"/>
+                <l:HorizontalLayout>
+                    <RadioButton text="Single Selection" select="changeToSingleSelectionMode" groupName="selectionGroup"
+                                 selected="true"/>
+                    <RadioButton text="Range Selection" select="changeToRangeSelectionMode" groupName="selectionGroup"/>
+                    <RadioButton text="Multi Selection" select="changeToMultiSelectionMode" groupName="selectionGroup"/>
+                </l:HorizontalLayout>
+                <List
+                        id="selectedDatesList"
+                        class="labelMarginLeft"
+                        noDataText="No Dates Selected"
+                        headerText="Selected Dates"
+                        items="{calendarList>/}">
+                    <StandardListItem
+                            title="{Date}"/>
+                </List>
+            </l:VerticalLayout>
+        
+   
+</core:FragmentDefinition>

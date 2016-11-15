@@ -1,0 +1,16 @@
+<core:FragmentDefinition  xmlns       = "sap.m"
+                          xmlns:core  = "sap.ui.core">
+  
+  <SelectDialog           title       = "Company"
+                          items       = "{CompanyList>/}"
+                          close       = "closeCompanyList"
+                          confirm     = "confirmCompanyList">
+                          
+  
+    <StandardListItem     title       = "{CompanyList>Name}"
+                          description = "{CompanyList>Number}" 
+                          type        = "Active"/>
+  
+  </SelectDialog>
+  
+</core:FragmentDefinition>

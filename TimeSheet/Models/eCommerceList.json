@@ -1,0 +1,25 @@
+{
+	"nodes": [
+    {"id": "1" , "lane": "0" , "title" : "2400 users online"  , "titleAbbreviation": "2400", "children": ["2"] , "isTitleClickable": true, "state": "Planned"  , "focused": true, "texts": ["1754 Desktop","646 Mobile"]},
+    {"id": "2" , "lane": "1",  "title" : "150 orders"         , "titleAbbreviation": "150" , "children": ["3","4","5"] , "isTitleClickable": true, "state": "Positive" , "stateText": "System OK", "focused": true, "texts": []},
+    {"id": "3" , "lane": "2",  "title" : "4   orders"         , "titleAbbreviation": "4"  , "children": ["6"] , "isTitleClickable": true, "state": "Negative" , "stateText": "Error", "focused": true, "texts": []},
+    {"id": "4" , "lane": "2",  "title" : "44   orders"        , "titleAbbreviation": "44" , "children": ["7"] , "isTitleClickable": true, "state": "Positive" , "stateText": "Ok", "focused": true, "texts": []},
+    {"id": "5" , "lane": "2",  "title" : "22   orders"        , "titleAbbreviation": "22" , "children": ["8"] , "isTitleClickable": true, "state": "Positive" , "stateText": "Ok", "focused": true, "texts": []},
+    {"id": "6" , "lane": "3",  "title" : "7   orders"         , "titleAbbreviation": "4"  , "children": ["9"] , "isTitleClickable": true, "state": "Negative" , "stateText": "Error", "focused": true, "texts": []},
+    {"id": "7" , "lane": "3",  "title" : "18   orders"        , "titleAbbreviation": "44" , "children": ["9"] , "isTitleClickable": true, "state": "Positive" , "stateText": "Ok", "focused": true, "texts": []},
+    {"id": "8" , "lane": "3",  "title" : "25   orders"        , "titleAbbreviation": "22" , "children": ["10"] , "isTitleClickable": true, "state": "Neutral" , "stateText": "Ok", "focused": true, "texts": []},
+    {"id": "9" , "lane": "4",  "title" : "Route 1"            , "titleAbbreviation": "R1" , "children": ["11"] , "isTitleClickable": true, "state": "Positive" , "stateText": "147 Orders", "focused": true, "texts": []},
+    {"id": "10", "lane": "4",  "title" : "Route 2"            , "titleAbbreviation": "R2" , "children": ["12"] , "isTitleClickable": true, "state": "Positive" , "stateText": "63 Orders", "focused": true, "texts": []},
+    {"id": "11" , "lane": "5",  "title" : "44   orders"        , "titleAbbreviation": "44" , "children": [] , "isTitleClickable": true, "state": "Positive" , "stateText": "Ok", "focused": true, "texts": []},
+    {"id": "12" , "lane": "5",  "title" : "36   orders"        , "titleAbbreviation": "22" , "children": [] , "isTitleClickable": true, "state": "Positive" , "stateText": "Ok", "focused": true, "texts": []}
+  ],
+  "lanes":[
+  	{"id": "0"  ,	"icon": "sap-icon://arobase"          , "label": "Connections - 2400"  , "position": 0 , "state": ["Positive",87]},
+  	{"id": "1"  ,	"icon": "sap-icon://my-sales-order"   , "label": "Orders - 150"        , "position": 1},
+  	{"id": "2"	,	"icon": "sap-icon://database"         , "label": "In preparation - 70" , "position": 2},
+  	{"id": "3"	,	"icon": "sap-icon://payment-approval" , "label": "Payments - 50"       , "position": 3},
+  	{"id": "4"	,	"icon": "sap-icon://shipping-status"  , "label": "In delivery - 210"   , "position": 4},
+  	{"id": "5"	,	"icon": "sap-icon://nurse"            , "label": "Delivered - 80"      , "position": 5}	
+  ]
+
+}

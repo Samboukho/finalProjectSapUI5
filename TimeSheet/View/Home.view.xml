@@ -1,0 +1,145 @@
+<mvc:View		height 			=	"100%"
+				xmlns:core 		=	"sap.ui.core"
+				xmlns:l			= 	"sap.ui.layout"
+				xmlns:mvc 		=	"sap.ui.core.mvc"
+				xmlns 			=	"sap.m"
+				controllerName 	=	"sap.ui.project.timeSheet.Controller.Home"
+				xmlns:s 		=	"sap.m.semantic"
+				xmlns:ui 		=	"sap.ca.ui"
+				xmlns:u 		=	"sap.ui.unified"
+				xmlns:st		=	"sap.suite.ui.commons"
+				showHeader		= 	"false">
+
+	<u:Shell id="myShell"
+			icon="images/Ariel_University_logo-2-1.png">
+			<u:headItems>
+				<u:ShellHeadItem
+					tooltip="Configuration"
+					icon="sap-icon://menu2"
+					press="handleShowMaster" />
+			</u:headItems>
+			<!-- <u:ariaLabelledBy id = "oLabel"/> -->
+				
+			<u:headEndItems>
+				<u:ShellHeadItem
+					icon="sap-icon://log"
+					tooltip="Logoff"
+					press="handleLogoffPress" />
+			</u:headEndItems>
+			<!-- <u:curtainContent>
+				<Label id = "oLabel"/>
+			</u:curtainContent> -->
+			<u:user>
+				<u:ShellHeadUserItem
+					image="sap-icon://person-placeholder"
+					username="{userLog>/FamilyName} {userLog>/Name}"
+					press="handleUserItemPressed" />
+			</u:user>
+			<u:search>
+				<!-- <SearchField
+					search="handleSearchPressed"/> -->
+					<Text 	id 			=	"oLabel"
+							textAlign  	=	"Center"
+							class 		=	"sapUiLargeMarginBegin"/>
+			</u:search>
+		</u:Shell>	
+	<u:SplitContainer 	showSecondaryContent 	=	"true" 
+						id 						= 	"SplitPage"
+						showHeader				= 	"false"
+						showFooter 				= 	"false"
+						mode					=	"HideMode"
+						class					= 	"sapUiLargeMarginTop">
+		<u:secondaryContent>
+			<Page 			showFooter 		=	"false"
+							showHeader 		= 	"false"
+							enableScrolling = 	"true"
+							backgroundDesign= 	"Standard"
+							class 			= 	"MainMasterPage sapMGlobalBackgroundColorStrong"
+							id 				=	"MainMasterPage">
+				<ObjectHeader 	title 		= 	"Time Sheet"
+								icon 		= 	"sap-icon://time-entry-request"
+								class 		= 	"sapUiSmallMarginBottom" />
+
+				<List 		class			= 	"XCLeftMenuList"
+							backgroundDesign= 	"Solid"
+							items 			=	"{MasterList>/MainMenu}" 
+							mode 			= 	"SingleSelectMaster"
+							showSeparators 	=	"None"
+							id 				=	"masterList"
+							itemPress 		=	"NavToView"> 
+					
+					<StandardListItem 	title 	=	"{MasterList>text}"
+										counter = 	"{MasterList>Quantity}"
+										icon 	=	"{MasterList>icon}"
+										type 	=	"Active"/>
+				</List>
+				
+				<!-- <panel  	expandable 		= 	"false"
+							expanded 		=	"false"
+							backgroundDesign= 	"Transparent"/>
+				
+					<List 		items 			=	"{List>/CollectionAll/}" 
+								showSeparators 	=	"None">
+						
+						<StandardListItem 	title 	=	"{List>text}"
+											counter = 	"{List>Quantity}"
+											icon 	=	"{List>icon}"/> 
+					</List>-->
+
+				<!-- <panel  	expandable 		= 	"false"
+							expanded 		=	"false"
+							backgroundDesign= 	"Transparent"/> -->
+
+				<IconTabBar id 				= 	"idIconTabBar">
+					<items>
+						<IconTabFilter
+							text="Most Used">
+							<List 		class			= 	"XCLeftMenuList"
+										backgroundDesign= 	"Solid"
+										items 			=	"{MasterList>/MostUsed}" 
+										mode 			= 	"SingleSelectMaster"
+										showSeparators 	=	"None"
+										id 				=	"MostUsedList"
+										itemPress 		=	"NavToView"> 
+								
+								<StandardListItem 	title 	=	"{MasterList>text}"
+													counter = 	"{MasterList>Quantity}"
+													icon 	=	"{MasterList>icon}"
+													type 	=	"Active"/>
+							</List>
+						</IconTabFilter>
+						<IconTabFilter
+							text="Favorites">
+							<List 		class			= 	"XCLeftMenuList"
+										backgroundDesign= 	"Solid"
+										items 			=	"{MasterList>/Favorites}" 
+										mode 			= 	"SingleSelectMaster"
+										showSeparators 	=	"None"
+										id 				=	"FavoritesList"
+										itemPress 		=	"NavToView"> 
+								
+								<StandardListItem 	title 	=	"{MasterList>text}"
+													counter = 	"{MasterList>Quantity}"
+													icon 	=	"{MasterList>icon}"
+													type 	=	"Active"/>
+							</List>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+
+			</Page>
+		</u:secondaryContent>
+		<u:content 		id 				= 	"Detail">
+ 			<Page 		id 				= 	"detailPage"
+						showHeader		= 	"false">
+				<!-- <Shell 	class			= 	"XCAppShell">
+					<NavContainer 	id 	= 	"NavContainer"/>
+				</Shell> -->
+				
+				<core:Fragment fragmentName="sap.ui.project.timeSheet.View.Calendar" type="XML" />
+								
+				
+			</Page>
+		</u:content>
+	</u:SplitContainer>
+</mvc:View>

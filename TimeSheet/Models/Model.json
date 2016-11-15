@@ -1,0 +1,69 @@
+{
+	"ColumnCollection":[
+		{"icon" : "sap-icon://home","text" : "Home", "path" : "homeScreen"},
+		{"icon" : "sap-icon://customer-financial-fact-sheet","text" : "Financial dashboard", "path" : "FinancialDashboard"},
+		{"icon" : "sap-icon://area-chart","text" : "Revenue Growth vote", "path" : "division"},
+		{"icon" : "sap-icon://retail-store","text" : "Stores dashboard", "path" : "ChangedOn"},
+		{"icon" : "sap-icon://sales-order","text" : "Sales dashboard", "path" : "BaseUnit"},
+		{"icon" : "sap-icon://collections-management","text" : "Material Management", "path" : "ChangedBy"},
+		{"icon" : "sap-icon://sales-notification","text" : "Sales & Distribution", "path" : "Supervised"},
+		{"icon" : "sap-icon://database","text" : "Master Data", "path" : "AHGroup"},
+		{"icon" : "sap-icon://request","text" : "WM", "path" : "Supervised"},
+		{"icon" : "sap-icon://post","text" : "E-Commerce dashboard", "path" : "ECommerceDashboard"}
+		],
+	"CollectionAll":[
+		{"icon" : "sap-icon://alphabetical-order","text" : "All Apps"},
+		{"icon" : "sap-icon://menu2","text" : "All Menus"}
+	],
+	"TileCollection":[
+		{"icon" : "sap-icon://email"									,"text" : "Email"},
+		{"icon" : "sap-icon://post"										,"text" : "Notification - Alert"},
+		{"icon" : "sap-icon://time-overtime"							,"text" : "Sales VS Forecast hourly"},
+		{"icon" : "sap-icon://upstacked-chart"							,"text" : "Stock Coverage"},
+		{"icon" : "sap-icon://crm-sales"								,"text" : "CRM"},
+		{"icon" : "sap-icon://accounting-document-verification"			,"text" : "Profit Margine"}
+	],
+	"tableData":[
+		{"Stores" : "TZ001"	,	"Forecast" : "1000055"		,	"Sales" : "210251"},
+		{"Stores" : "TZ020"	,	"Forecast" : "400523"		,	"Sales" : "42587"},
+		{"Stores" : "RF032"	,	"Forecast" : "754213"		,	"Sales" : "2105"},
+		{"Stores" : "RF033"	,	"Forecast" : "42135423"		,	"Sales" : "21051"},
+		{"Stores" : "RF034"	,	"Forecast" : "7513542"		,	"Sales" : "2151405"}
+	],
+	"Years":[
+		{"Years" : "2015"},
+		{"Years" : "2014"},
+		{"Years" : "2013"},
+		{"Years" : "2012"},
+		{"Years" : "2011"},
+		{"Years" : "2010"}
+	],
+	"Months":[
+		{"Mounth" : "January"},
+		{"Mounth" : "February"},
+		{"Mounth" : "March"},
+		{"Mounth" : "April"},
+		{"Mounth" : "May"},
+		{"Mounth" : "June"},
+		{"Mounth" : "July"},
+		{"Mounth" : "August"},
+		{"Mounth" : "September"},
+		{"Mounth" : "October"},
+		{"Mounth" : "November"},
+		{"Mounth" : "December"}
+	],
+	"StoresTable":[
+		{"Stores" : "K001 - City Central"	,	"HourlyActual" : "12,053" 		, "HourlyTD" : "18,078.47"	,	"HourlyTP" : "66.67" 	, "DailyTS" : "96,424" 		, "status" : "Success" , "DailyTD" : "145,748.3" , "DailyTP" : "66.67" },
+		{"Stores" : "K002 - North Area"		,	"HourlyActual" : "15,473" 		, "HourlyTD" : "25,441.55"	,	"HourlyTP" : "60.81"	, "DailyTS" : "123,784" 	, "status" : "Error" , "DailyTD" : "180,734.56" , "DailyTP" : "60.81"},
+		{"Stores" : "K003 - South Area"		,	"HourlyActual" : "9,362.73" 	, "HourlyTD" : "16,954.25"	,	"HourlyTP" : "55.22"	, "DailyTS" : "74,901.904" 	, "status" : "Error" , "DailyTD" : "135,648.79" , "DailyTP" : "55.22"},
+		{"Stores" : "S063 - East Area"		,	"HourlyActual" : "14,077.85" 	, "HourlyTD" : "20,314.53"	,	"HourlyTP" : "69.29"	, "DailyTS" : "112,622.8" 	, "status" : "Success" , "DailyTD" : "201,856.9" , "DailyTP" : "69.29" },
+		{"Stores" : "S001 - West Area"		,	"HourlyActual" : "12,237.08" 	, "HourlyTD" : "18,635.15"	,	"HourlyTP" : "65.66"	, "DailyTS" : "97896.64" 	, "status" : "Success" , "DailyTD" : "145,587.12" , "DailyTP" : "65.66"}
+	],
+	"Bank":[
+		{"Name": "HSBC" , "Account": "5179512/1" , "Today": "1,550,000.12" , "Yesterday": "1,456,333.74"},
+		{"Name": "HSBC" , "Account": "154178/2" , "Today": "750,487.45" , "Yesterday": "823,426.85"},
+		{"Name": "Deutsche Bank" , "Account": "487216546AA2" , "Today": "2,549,100.50" , "Yesterday": "2,549,100.50"},
+		{"Name": "BNP Paribas Fortis" , "Account": "5179512/1" , "Today": "851,871,99" , "Yesterday": "850,332,11"},
+		{"Name": "Leumi" , "Account": "5179512/1" , "Today": "1,550,000.12" , "Yesterday": "1,456,333.74"}
+	]
+}
