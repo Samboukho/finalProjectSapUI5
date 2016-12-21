@@ -4,14 +4,22 @@ sap.ui.define([	'sap/ui/core/UIComponent',
 	"use strict";
 
 	var Component = UIComponent.extend("sap.ui.project.timeSheet.Component", {
-
-		metadata : {
-			rootView : "sap.ui.project.timeSheet.View.App",
-			dependencies : {
-				libs : [
-					"sap.m","sap.ui.commons","sap.ui.core"
-				]
-			},//	Configuration
+		refreshData: 			false,
+	 
+	//	Application meta data
+	metadata: {
+		name:				"Time Sheet",
+		version:			"0.1",
+		includes:			[],
+		dependencies: {
+			libs:			["sap.m","sap.ui.commons","sap.ui.core"],
+			components:		[]
+		},
+		
+		//	Root view definition
+		rootView:			"sap.ui.project.timeSheet.View.App",
+		
+		//	Configuration
 		config: {
 			resourceBundle: "i18n/i18n.properties"
 		},
@@ -19,31 +27,69 @@ sap.ui.define([	'sap/ui/core/UIComponent',
 		//	Routing
 		routing: {
 			config : {
-				routerClass 		: 	"sap.m.routing.Router",
-				viewType			:	"XML",
-				viewPath			:	"sap.ui.project.timeSheet.View",
-				targetControl		:	"appTimeSheet",
-				targetAggregation	: 	"pages",
-				clearTarget			: 	false
+				viewType:		"XML",
+				targetControl:	"appTimeSheet",
+				targetAggregation:"pages",
+				clearTarget: 	false
 			},
 			routes: [{
-				pattern: 		"Page",
-				name:			"Page",
-				view:			"Page"
+				pattern: 		"",
+				name:			"Overview",
+				view:			"sap.ui.project.timeSheet.View.Overview"
 				
 	        },{
-	        	pattern:		"",
-	        	name:			"Home",
-	        	view:			"Home"
+	        	pattern:		"Detail/{Article}",
+	        	name:			"Detail",
+	        	view:			"sap.ui.project.timeSheet.View.Detail"
 	        },{
-	        	pattern:		"Menu",
-	        	name:			"Menu",
-	        	view:			"Menu"
-	        },{
-	        	pattern:		"Calendar",
-	        	name:			"Calendar",
-	        	view:			"Calendar"
+	        	pattern:		"NouvelleRecette",
+	        	name:			"NewArticle",
+	        	view:			"sap.ui.project.timeSheet.View.Detail"
 	        }]
+		}
+		// metadata : {
+		// 	rootView : "sap.ui.project.timeSheet.View.App",
+		// 	dependencies : {
+		// 		libs : [
+		// 			"sap.m","sap.ui.commons","sap.ui.core"
+		// 		]
+		// 	},//	Configuration
+		// config: {
+		// 	resourceBundle: "i18n/i18n.properties"
+		// },
+		
+		// //	Routing
+		// routing: {
+		// 	config : {
+		// 		routerClass 		: 	"sap.m.routing.Router",
+		// 		viewType			:	"XML",
+		// 		viewPath			:	"sap.ui.project.timeSheet.View",
+		// 		targetControl		:	"appTimeSheet",
+		// 		targetAggregation	: 	"pages",
+		// 		clearTarget			: 	false
+		// 	},
+		// 	routes: [{
+		// 		pattern: 		"Page",
+		// 		name:			"Page",
+		// 		view:			"Page"
+				
+	 //        },{
+	 //        	pattern:		"Home",
+	 //        	name:			"Home",
+	 //        	view:			"Home"
+	 //        },{
+	 //        	pattern:		"Menu",
+	 //        	name:			"Menu",
+	 //        	view:			"Menu"
+	 //        },{
+	 //        	pattern:		"Calendar",
+	 //        	name:			"Calendar",
+	 //        	view:			"Calendar"
+	 //        },{
+	 //        	pattern:		"",
+	 //        	name:			"Detail",
+	 //        	view:			"Detail"
+	 //        }]
 			// config : {
 			// 	sample : {
 			// 		stretch : true,
@@ -131,7 +177,7 @@ sap.ui.define([	'sap/ui/core/UIComponent',
 	  //                   "viewId":   "ecd"
 	  //               }
 	  //           }
-			}			
+					
 		},
 		
 		init: function() {

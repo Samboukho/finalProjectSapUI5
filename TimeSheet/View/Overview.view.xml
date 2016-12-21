@@ -4,7 +4,7 @@
 				xmlns:form		=	"sap.ui.layout.form"
 				xmlns:mvc 		=	"sap.ui.core.mvc"
 				xmlns 			=	"sap.m"
-				controllerName 	=	"sap.ui.project.timeSheet.Controller.Page"
+				controllerName 	=	"sap.ui.project.timeSheet.Controller.Overview"
 				xmlns:s 		=	"sap.m.semantic"
 				xmlns:ui 		=	"sap.ca.ui"
 				xmlns:u 		=	"sap.ui.unified"

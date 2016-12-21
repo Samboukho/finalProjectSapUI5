@@ -6,7 +6,7 @@ sap.ui.define([
 	'sap/m/MessagePopoverItem',
 ], function(jQuery, Controller, JSONModel, MessagePopover, MessagePopoverItem) {
 	"use strict";
-	var PageController = Controller.extend("sap.ui.project.timeSheet.Controller.Page", {
+	var PageController = Controller.extend("sap.ui.project.timeSheet.Controller.Overview", {
 
 		onInit: function() {
 			
@@ -41,7 +41,7 @@ sap.ui.define([
 					login[i].log = "true";
 					this.getView().getModel( "userLog" ).setData( login[i] );
 					var router 			= 	sap.ui.core.UIComponent.getRouterFor( this.getView() );
-					router.navTo("Home",username, false);
+					router.navTo("Detail",{ "Article": username}, false);
 				}
 			}
 

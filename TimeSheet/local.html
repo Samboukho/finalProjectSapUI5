@@ -22,20 +22,28 @@
 		<script>
 
 			sap.ui.getCore().attachInit(function() {
-				new sap.m.App ({
-					pages: [
-						new sap.m.Page({
-							title: "Time sheet", 
-							showHeader: false,
-							showFooter: true,
-							enableScrolling : false,
-							content: [ new sap.ui.core.ComponentContainer({
-								height : "100%", name : "sap.ui.project.timeSheet"
-							})]
-						})
-					]
+				new sap.m.Shell({
+					appWidthLimited: true,
+					app: new sap.ui.core.ComponentContainer({
+						height: "100%",
+						name: 	"sap.ui.project.timeSheet"
+					})
 				}).placeAt("content");
 			});
+			// 	new sap.m.App ({
+			// 		pages: [
+			// 			new sap.m.Page({
+			// 				title: "Time sheet", 
+			// 				showHeader: false,
+			// 				showFooter: true,
+			// 				enableScrolling : false,
+			// 				content: [ new sap.ui.core.ComponentContainer({
+			// 					height : "100%", name : "sap.ui.project.timeSheet"
+			// 				})]
+			// 			})
+			// 		]
+			// 	}).placeAt("content");
+			// });
 
 		</script>
 		<link rel="stylesheet" type="text/css" href="style.css">

@@ -1,0 +1,210 @@
+<mvc:View		height 			=	"100%"
+				xmlns:core 		=	"sap.ui.core"
+				xmlns:layout	= 	"sap.ui.layout"
+				xmlns:mvc 		=	"sap.ui.core.mvc"
+				xmlns 			=	"sap.m"
+				xmlns:uxap		= 	"sap.uxap"
+				controllerName 	=	"sap.ui.project.timeSheet.Controller.Detail"
+				xmlns:s 		=	"sap.m.semantic"
+				xmlns:ui 		=	"sap.ca.ui"
+				xmlns:u 		=	"sap.ui.unified"
+				xmlns:st		=	"sap.suite.ui.commons"
+				xmlns:forms 	= 	"sap.ui.layout.form"
+				showHeader		= 	"false">
+
+	<u:Shell id="myShell"
+			icon="images/Ariel_University_logo-2-1.png">
+			<u:headItems>
+				<u:ShellHeadItem
+					tooltip="Configuration"
+					icon="sap-icon://menu2"
+					press="handleShowMaster" />
+			</u:headItems>
+			<!-- <u:ariaLabelledBy id = "oLabel"/> -->
+				
+			<u:headEndItems>
+				<u:ShellHeadItem
+					icon="sap-icon://log"
+					tooltip="Logoff"
+					press="handleLogoffPress" />
+			</u:headEndItems>
+			<!-- <u:curtainContent>
+				<Label id = "oLabel"/>
+			</u:curtainContent> -->
+			<u:user>
+				<u:ShellHeadUserItem
+					image="sap-icon://person-placeholder"
+					username="{userLog>/FamilyName} {userLog>/Name}"
+					press="handleUserItemPressed" />
+			</u:user>
+			<u:search>
+				<!-- <SearchField
+					search="handleSearchPressed"/> -->
+					<Text 	id 			=	"oLabel"
+							textAlign  	=	"Center"
+							class 		=	"sapUiLargeMarginBegin"/>
+			</u:search>
+		</u:Shell>	
+	<u:SplitContainer 	showSecondaryContent 	=	"true" 
+						id 						= 	"SplitPage"
+						showHeader				= 	"false"
+						showFooter 				= 	"false"
+						mode					=	"HideMode"
+						class					= 	"sapUiLargeMarginTop">
+		<u:secondaryContent id 					=	"masterId">
+			<Page 				showFooter 		=	"false"
+								showHeader 		= 	"false"
+								enableScrolling = 	"true"
+								backgroundDesign= 	"Standard"
+								id 				=	"MainMasterPage">
+				<Toolbar 		design 			=	"Solid">
+					<Button 	icon 			=	"sap-icon://arrow-left"
+								type 			=	"Transparent"
+								press 			=	"handleNavButtonPress"/>
+					<ToolbarSpacer/>
+					<Text 		text 			= 	"recette(4)"/>
+					<ToolbarSpacer/>
+					<Button 	icon 			=	"sap-icon://menu"
+								type 			=	"Transparent"/>
+				</Toolbar>
+				
+				<SearchField 	search 			=	"handleSearch"
+				    			width			=	"100%" 
+				    			class 			=	"sapUiNoMarginTop"/>
+
+				<List 			backgroundDesign= 	"Solid"
+								items 			=	"{MasterList>/MainMenu}" 
+								mode 			= 	"SingleSelectMaster"
+								id 				=	"masterList"
+								itemPress 		=	"NavToView"> 
+					
+					<StandardListItem 	title 	=	"{MasterList>text}"
+										counter = 	"{MasterList>Quantity}"
+										icon 	=	"{MasterList>icon}"
+										type 	=	"Active"/>
+				</List>
+			
+			</Page>
+		</u:secondaryContent>
+		<u:content 		id 				= 	"Detail"
+						enableScrolling = 	"true">
+ 			<!-- <Page 		id 				= 	"detailPage"
+						showHeader		= 	"false">
+				<Shell 	class			= 	"XCAppShell">
+					<NavContainer 	id 	= 	"NavContainer"/>
+				</Shell>
+			</Page> -->
+			<Panel 	expandable 	=	"false" 
+					expanded 	=	"true"
+					width 		=	"100%"
+					backgroundDesign = "Solid">
+				
+											
+				<layout:HorizontalLayout>
+				<Image 		src 				= "images/userImage.png"
+							width 				=	"100px"
+							height				=	"100px"/>
+					
+						<VBox  class 		=	 "sapUiSmallMarginBegin sapUiSmallMarginTop">
+							<Label 			text 			=	"Family name"
+											class 			=	"sapUiTinyMarginTop"/>
+							<Label 			text 			=	"Name" 				
+											class 			=	"sapUiTinyMarginTop"/>
+							<Label 			text 			=	"Job title" 	
+											class 			=	"sapUiTinyMarginTop"/>
+						</VBox>
+
+						<VBox   class 			=	"sapUiTinyMarginBegin sapUiSmallMarginTop">	
+							<Input 			value 			=	"{LoginModel>/FamilyName}"
+											editable 		=	"false"/>
+							<Input 			value 			=	"{LoginModel>/Name}"
+											editable 		=	"false"/>
+							<Input 			value 			=	"Blabla"
+											editable 		=	"false"/>
+						</VBox>
+					
+					
+					
+						<VBox class 		=	"sapUiLargeMarginBegin sapUiSmallMarginTop">
+							<Label 			text 			=	"Project" 		
+											class 			=	"sapUiTinyMarginTop"/>
+							<Label 			text 			=	"Task" 	
+											class 			=	"sapUiTinyMarginTop"/>
+						</VBox>
+						<VBox class 			=	"sapUiTinyMarginBegin sapUiSmallMarginTop">
+							<Input 			showValueHelp 	=	"true"
+											value 			=	"Blabla"/>
+							<Input 			showValueHelp 	=	"true"
+											value 			=	"Blabla"/>
+						</VBox>
+					
+				</layout:HorizontalLayout>
+<!-- 
+				<layout:VerticalLayout>
+					<Button 		text 			=	"{i18n>PRINT}"
+									icon 			=	"sap-icon://print"/>
+					<Button 		text 			=	"{i18n>NEW_RECETTE}"
+									icon 			=	"sap-icon://add"
+									type 			=	"Accept"/>
+					<Button 		text 			=	"{i18n>EDIT}"
+									icon 			=	"sap-icon://edit"
+									type 			=	"Emphasized"/>
+					<Button 		text 			=	"{i18n>DELETE}"
+									icon 			=	"sap-icon://sys-cancel"
+									type 			=	"Reject"/>
+				</layout:VerticalLayout>
+						 -->
+				</Panel>
+					 <!-- </forms:SimpleForm> -->
+							<Panel 	expandable 	=	"false" 
+								expanded 	=	"true"
+								width 		=	"100%"
+								backgroundDesign = "Transparent">
+								<!-- <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Detail" type="XML" /> -->
+								<IconTabBar showSelection 		= 	"true"
+											expandable 			= 	"false"
+											expanded			= 	"true"
+											id 					=	"iconTabDetail">
+									<items>
+										<IconTabFilter 	text 	=	"{i18n>INFO_GENERAL}"
+														icon	= 	"sap-icon://activity-items"
+														key		=	"infoGeneralTab">
+											<core:Fragment fragmentName="sap.ui.project.timeSheet.DetailViewFragment.Calendar" type="XML" />
+										</IconTabFilter>
+<!-- 
+										<IconTabFilter 	text 	=	"{i18n>INGREDIENT}"
+														icon 	= 	"sap-icon://basket">
+											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Ingredient" type="XML" />
+										</IconTabFilter>
+										
+										<IconTabFilter 	text 	=	"{i18n>VOLUMES}"
+														icon 	= 	"sap-icon://measurement-document">
+											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Volume" type="XML" />
+										</IconTabFilter>
+										
+										<IconTabFilter 	text 	=	"{i18n>TEXT}"
+														icon 	= 	"sap-icon://document-text">
+											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Text" type="XML" />
+										</IconTabFilter>
+										
+										<IconTabFilter 	text 	=	"{i18n>TPV_CODE}"
+														icon 	= 	"sap-icon://bar-code">
+											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.TPV" type="XML" />
+										</IconTabFilter>
+										
+										<IconTabFilter 	text 	=	"{i18n>PHOTO}"
+														icon 	= 	"sap-icon://attachment-photo">
+											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.imageTab" type="XML" />
+										</IconTabFilter> -->
+										<!-- 
+										<IconTabFilter 	text 	=	"{i18n>COMITE_DEGUSTATION}"
+														icon 	= 	"sap-icon://account">
+											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.ComDegustTab" type="XML" />
+										</IconTabFilter> -->
+									</items>
+								</IconTabBar>
+							</Panel>
+
+		</u:content>
+	</u:SplitContainer>
+</mvc:View>

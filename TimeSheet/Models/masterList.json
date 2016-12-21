@@ -5,10 +5,10 @@
 		
 	],
 	"MostUsed":[
-		{"icon" : "sap-icon://product","text" : "Catalog Management", "id" : "homeScreen"},
+		{"icon" : "sap-icon://product","text" : "text", "id" : "homeScreen"},
 		{"icon" : "sap-icon://order-status","text" : "Orders monitor", "id" : "FinancialDashboard"},
 		{"icon" : "sap-icon://shipping-status","text" : "Inbound delivery", "id" : "RevenueGrowthRate"},
-		{"icon" : "sap-icon://sales-order","text" : "Purchase Order", "id" : "SalesDashboard"}
+		{"icon" : "sap-icon://sales-order","text" : "BLABLABLA", "id" : "SalesDashboard"}
 	],
 	"Favorites":[
 		{"icon" : "sap-icon://inventory","text" : "Inventory dashboard", "id" : "InventoryDashboard"},
