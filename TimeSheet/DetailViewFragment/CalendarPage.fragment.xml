@@ -1,0 +1,104 @@
+<core:FragmentDefinition    xmlns:layout    =   "sap.ui.layout"
+                            xmlns:me        =   "sap.me"
+                            xmlns:forms     =   "sap.ui.layout.form"
+                            xmlns:core      =   "sap.ui.core"
+                            xmlns:u         =   "sap.ui.unified"
+                            xmlns:mvc       =   "sap.ui.core.mvc"
+                            xmlns           =   "sap.m">
+    
+     <Panel     expandable  =   "false" 
+                expanded    =   "true"
+                width       =   "100%"
+                backgroundDesign = "Solid">
+            
+                                        
+        <layout:HorizontalLayout>
+            <Image      src                 = "images/userImage.png"
+                        width               =   "100px"
+                        height              =   "100px"/>
+            
+            <VBox  class        =    "sapUiSmallMarginBegin sapUiSmallMarginTop">
+                <Label          text            =   "Family name"
+                                class           =   "sapUiTinyMarginTop"/>
+                <Label          text            =   "Name"              
+                                class           =   "sapUiTinyMarginTop"/>
+                <Label          text            =   "Job title"     
+                                class           =   "sapUiTinyMarginTop"/>
+            </VBox>
+
+            <VBox   class           =   "sapUiTinyMarginBegin sapUiSmallMarginTop"> 
+                <Input          value           =   "{LoginModel>/FamilyName}"
+                                editable        =   "false"/>
+                <Input          value           =   "{LoginModel>/Name}"
+                                editable        =   "false"/>
+                <Input          value           =   "Blabla"
+                                editable        =   "false"/>
+            </VBox>
+        
+        
+        
+            <VBox class         =   "sapUiLargeMarginBegin sapUiSmallMarginTop">
+                <Label          text            =   "Project"       
+                                class           =   "sapUiTinyMarginTop"/>
+                <Label          text            =   "Task"  
+                                class           =   "sapUiTinyMarginTop"/>
+            </VBox>
+            <VBox class             =   "sapUiTinyMarginBegin sapUiSmallMarginTop">
+                <Input          showValueHelp   =   "true"
+                                value           =   "Blabla"/>
+                <Input          showValueHelp   =   "true"
+                                value           =   "Blabla"/>
+            </VBox>
+            
+        </layout:HorizontalLayout>
+
+    </Panel>
+    <Panel  expandable      =   "false" 
+            expanded        =   "true"
+            width           =   "100%"
+            backgroundDesign= "Transparent">
+        <IconTabBar showSelection       =   "true"
+                    expandable          =   "false"
+                    expanded            =   "true"
+                    id                  =   "iconTabDetail">
+            <items>
+                <IconTabFilter  text    =   "{i18n>CALENDAR}"
+                                icon    =   "sap-icon://appointment-2"
+                                key     =   "infoGeneralTab">
+                    <core:Fragment fragmentName="sap.ui.project.timeSheet.DetailViewFragment.Calendar" type="XML" />
+                </IconTabFilter>
+
+                <IconTabFilter  text    =   "{i18n>WEEKS}"
+                                icon    =   "sap-icon://accelerated">
+                    <core:Fragment fragmentName="sap.ui.project.timeSheet.DetailViewFragment.Weeks" type="XML" />
+                </IconTabFilter>
+                
+                <!-- <IconTabFilter  text    =   "{i18n>VOLUMES}"
+                                icon    =   "sap-icon://measurement-document">
+                    <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Volume" type="XML" />
+                </IconTabFilter>
+                
+                <IconTabFilter  text    =   "{i18n>TEXT}"
+                                icon    =   "sap-icon://document-text">
+                    <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Text" type="XML" />
+                </IconTabFilter>
+                
+                <IconTabFilter  text    =   "{i18n>TPV_CODE}"
+                                icon    =   "sap-icon://bar-code">
+                    <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.TPV" type="XML" />
+                </IconTabFilter>
+                
+                <IconTabFilter  text    =   "{i18n>PHOTO}"
+                                icon    =   "sap-icon://attachment-photo">
+                    <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.imageTab" type="XML" />
+                </IconTabFilter> -->
+                <!-- 
+                <IconTabFilter  text    =   "{i18n>COMITE_DEGUSTATION}"
+                                icon    =   "sap-icon://account">
+                    <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.ComDegustTab" type="XML" />
+                </IconTabFilter> -->
+            </items>
+        </IconTabBar>
+    </Panel>
+   
+</core:FragmentDefinition>

@@ -88,122 +88,21 @@
 		</u:secondaryContent>
 		<u:content 		id 				= 	"Detail"
 						enableScrolling = 	"true">
- 			<!-- <Page 		id 				= 	"detailPage"
-						showHeader		= 	"false">
-				<Shell 	class			= 	"XCAppShell">
-					<NavContainer 	id 	= 	"NavContainer"/>
-				</Shell>
-			</Page> -->
-			<Panel 	expandable 	=	"false" 
-					expanded 	=	"true"
-					width 		=	"100%"
-					backgroundDesign = "Solid">
-				
-											
-				<layout:HorizontalLayout>
-				<Image 		src 				= "images/userImage.png"
-							width 				=	"100px"
-							height				=	"100px"/>
-					
-						<VBox  class 		=	 "sapUiSmallMarginBegin sapUiSmallMarginTop">
-							<Label 			text 			=	"Family name"
-											class 			=	"sapUiTinyMarginTop"/>
-							<Label 			text 			=	"Name" 				
-											class 			=	"sapUiTinyMarginTop"/>
-							<Label 			text 			=	"Job title" 	
-											class 			=	"sapUiTinyMarginTop"/>
-						</VBox>
-
-						<VBox   class 			=	"sapUiTinyMarginBegin sapUiSmallMarginTop">	
-							<Input 			value 			=	"{LoginModel>/FamilyName}"
-											editable 		=	"false"/>
-							<Input 			value 			=	"{LoginModel>/Name}"
-											editable 		=	"false"/>
-							<Input 			value 			=	"Blabla"
-											editable 		=	"false"/>
-						</VBox>
-					
-					
-					
-						<VBox class 		=	"sapUiLargeMarginBegin sapUiSmallMarginTop">
-							<Label 			text 			=	"Project" 		
-											class 			=	"sapUiTinyMarginTop"/>
-							<Label 			text 			=	"Task" 	
-											class 			=	"sapUiTinyMarginTop"/>
-						</VBox>
-						<VBox class 			=	"sapUiTinyMarginBegin sapUiSmallMarginTop">
-							<Input 			showValueHelp 	=	"true"
-											value 			=	"Blabla"/>
-							<Input 			showValueHelp 	=	"true"
-											value 			=	"Blabla"/>
-						</VBox>
-					
-				</layout:HorizontalLayout>
-<!-- 
-				<layout:VerticalLayout>
-					<Button 		text 			=	"{i18n>PRINT}"
-									icon 			=	"sap-icon://print"/>
-					<Button 		text 			=	"{i18n>NEW_RECETTE}"
-									icon 			=	"sap-icon://add"
-									type 			=	"Accept"/>
-					<Button 		text 			=	"{i18n>EDIT}"
-									icon 			=	"sap-icon://edit"
-									type 			=	"Emphasized"/>
-					<Button 		text 			=	"{i18n>DELETE}"
-									icon 			=	"sap-icon://sys-cancel"
-									type 			=	"Reject"/>
-				</layout:VerticalLayout>
-						 -->
-				</Panel>
-					 <!-- </forms:SimpleForm> -->
-							<Panel 	expandable 	=	"false" 
-								expanded 	=	"true"
-								width 		=	"100%"
-								backgroundDesign = "Transparent">
-								<!-- <core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Detail" type="XML" /> -->
-								<IconTabBar showSelection 		= 	"true"
-											expandable 			= 	"false"
-											expanded			= 	"true"
-											id 					=	"iconTabDetail">
-									<items>
-										<IconTabFilter 	text 	=	"{i18n>INFO_GENERAL}"
-														icon	= 	"sap-icon://activity-items"
-														key		=	"infoGeneralTab">
-											<core:Fragment fragmentName="sap.ui.project.timeSheet.DetailViewFragment.Calendar" type="XML" />
-										</IconTabFilter>
-<!-- 
-										<IconTabFilter 	text 	=	"{i18n>INGREDIENT}"
-														icon 	= 	"sap-icon://basket">
-											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Ingredient" type="XML" />
-										</IconTabFilter>
-										
-										<IconTabFilter 	text 	=	"{i18n>VOLUMES}"
-														icon 	= 	"sap-icon://measurement-document">
-											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Volume" type="XML" />
-										</IconTabFilter>
-										
-										<IconTabFilter 	text 	=	"{i18n>TEXT}"
-														icon 	= 	"sap-icon://document-text">
-											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.Text" type="XML" />
-										</IconTabFilter>
-										
-										<IconTabFilter 	text 	=	"{i18n>TPV_CODE}"
-														icon 	= 	"sap-icon://bar-code">
-											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.TPV" type="XML" />
-										</IconTabFilter>
-										
-										<IconTabFilter 	text 	=	"{i18n>PHOTO}"
-														icon 	= 	"sap-icon://attachment-photo">
-											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.imageTab" type="XML" />
-										</IconTabFilter> -->
-										<!-- 
-										<IconTabFilter 	text 	=	"{i18n>COMITE_DEGUSTATION}"
-														icon 	= 	"sap-icon://account">
-											<core:Fragment fragmentName="XCUI.app.catalogRecette.DetailViewFragment.ComDegustTab" type="XML" />
-										</IconTabFilter> -->
-									</items>
-								</IconTabBar>
-							</Panel>
+			<NavContainer 	id 			=	"navCon"
+							class		=	"navContainerControl sapUiSmallMarginBottom">
+				<Page 		id 			=	"p1"
+							title		=	"TimeSheet" >
+					<core:Fragment 	fragmentName	=	"sap.ui.project.timeSheet.DetailViewFragment.CalendarPage" 
+									type 			=	"XML" 
+									id 				=	"DetailPage"/>
+				</Page>
+				<Page 		id 			=	"p2"
+							title		=	"Page 2" >
+					<core:Fragment 	fragmentName	=	"sap.ui.project.timeSheet.DetailViewFragment.Message" 
+									type 			=	"XML" 
+									id 				=	"DetailPage"/>
+				</Page>
+ 			</NavContainer>
 
 		</u:content>
 	</u:SplitContainer>

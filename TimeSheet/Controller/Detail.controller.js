@@ -18,6 +18,17 @@ sap.ui.controller(  "sap.ui.project.timeSheet.Controller.Detail", {
 	*/
 	onInit: function() {
 		this.getView().addStyleClass( "sapUiSizeCompact" );
+
+		// var webSocket = new WebSocket('ws://localhost:8080/fd6/websocket');
+		// webSocket.onerror = function(event) {
+		// 	onError(event)
+		//   };
+		// webSocket.onopen = function(event) {
+		// 	onOpen(event)
+		//   };
+		// webSocket.onmessage = function(event) {
+		// 	onMessage(event)
+		// };
 		
 		thisDetail	= this;
 		
@@ -32,7 +43,7 @@ sap.ui.controller(  "sap.ui.project.timeSheet.Controller.Detail", {
 		this.getView().setModel( new sap.ui.model.json.JSONModel("Models/CompanyList.json") , "CompanyList");
 		this.getView().setModel( new sap.ui.model.json.JSONModel("Models/StoresList.json") , "StoresList");
 		this.getView().setModel( new sap.ui.model.json.JSONModel("Models/PeriodList.json") , "PeriodList");
-		this.getView().setModel( new sap.ui.model.json.JSONModel("Models/eCommerceList.json") , "eCommerceList");
+		this.getView().setModel( new sap.ui.model.json.JSONModel("Models/ProjectWeek.json") , "ProjectWeek");
 		this.getView().setModel( new sap.ui.model.json.JSONModel() , "CalendarList");
 		this.getView().setModel( new sap.ui.model.json.JSONModel() , "MainData");
 		// this.handleShowMaster();
@@ -149,7 +160,7 @@ sap.ui.controller(  "sap.ui.project.timeSheet.Controller.Detail", {
         },
 
 	handleRouting: function( event ){
-		thisDetail.getView().rerender();
+		// thisDetail.getView().rerender();
 		pageName 		= event.getParameter( "name" );
 
 		
@@ -192,5 +203,45 @@ sap.ui.controller(  "sap.ui.project.timeSheet.Controller.Detail", {
 		thisDetail.byId( "SplitPage" ).setShowSecondaryContent( true );
 		thisDetail.byId( "expandableButton" ).setVisible( true );
 		thisDetail.byId( "collapseButton" ).setVisible( false );
+	},
+	NavToView:function( event ){
+		var navcon		= this.getView().byId("navCon"),
+			path 		= event.getParameter("listItem").getBindingContext( "MasterList" ).getPath(),
+			pageNumber	= this.getView().getModel( "MasterList" ).getProperty( path ).PageNumber;
+		
+		navcon.to(navcon.getPages()[pageNumber]);
+	},
+	formatDate:function( date ){
+		if( date.length < 2 ){
+			date = "0" + date;
+		}
+		return date;
+	},
+	toDateString:function( date ){
+		var mounth		=	this.formatDate( date.getMonth() + 1 + "" ),
+			day			=	this.formatDate( date.getDate() + "" );
+		return date.getFullYear() + mounth + day;	
+	},
+	handleCalendarSelect:function( event ){
+		var source	=	event.getSource(),
+			date 	=	this.toDateString( source.getSelectedDates()[0].getStartDate() ),
+			binding	=	source.getParent().getAggregation("content")[1].getBinding("items"),
+			filter	=	[ new sap.ui.model.Filter( "Date" , sap.ui.model.FilterOperator.EQ , date ) ];
+		binding.filter( filter );
+	},
+	onWeekChange:function( event ){
+		var source 	= 	event.getSource(),
+			sDate	=	source.getStartDate(),
+			filter	=	[],
+			binding	=	source.getParent().getAggregation("content")[1].getBinding("items"),
+			begin	=	null,
+			end		=	null;
+		sDate.setDate( sDate.getDate() - 1 );	
+		begin	=	this.toDateString( sDate );	
+		sDate.setDate( sDate.getDate() + 7 );	
+		end 	=	this.toDateString( sDate ),
+		filter.push( new sap.ui.model.Filter( "Date" , sap.ui.model.FilterOperator.BT , begin, end ) );
+		binding.filter( filter );
 	}
+
 });

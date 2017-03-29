@@ -1,0 +1,55 @@
+<core:FragmentDefinition    xmlns:l         =   "sap.ui.layout"
+                            xmlns:me        =   "sap.me"
+                            xmlns:forms     =   "sap.ui.layout.form"
+                            xmlns:core      =   "sap.ui.core"
+                            xmlns:u         =   "sap.ui.unified"
+                            xmlns:mvc       =   "sap.ui.core.mvc"
+                            xmlns           =   "sap.m">
+            <u:CalendarDateInterval
+                    id              =   "calendar"
+                    days            =   "7"
+                    width           =   "100%"
+                    select          =   "handleCalendarSelect"
+                    startDateChange =   "onWeekChange" />
+             <Table id      =   "weekProjectTable"
+                    inset   =   "false"
+                    items   =   "{ProjectWeek>/}"
+                    mode    =   "Delete"
+                    detele  =   "deleteTimeWeek">
+                <columns>
+                    <Column>
+                        <Text text="Project" />
+                    </Column>
+                    <Column>
+                        <Text text="Date"/>
+                    </Column>
+                   
+                    <Column>
+                        <Text text="Time" />
+                    </Column>
+                    <Column>
+                        <Text text="Comment" />
+                    </Column>
+                    <Column     width   =   "10%"/>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier
+                                title="{ProjectWeek>Project}"
+                                text="{ProjectWeek>Subject}"/>
+                            <DatePicker value           =   "{ProjectWeek>Date}"
+                                        valueFormat     =   "yyyyMMdd"
+                                        displayFormat   =   "dd.MM.yyyy"/>
+                            <TimePicker value           =   "{ProjectWeek>Time}"
+                                        valueFormat     =   "HH:mm"
+                                        displayFormat   =   "HH:mm"
+                                        change          =   "handleChange"/>
+                            <TextArea   value           =   "{ProjectWeek>Comment}"/>
+                            <core:Icon  src             =   "sap-icon://edit"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+   
+</core:FragmentDefinition>

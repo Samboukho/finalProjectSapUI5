@@ -1,0 +1,15 @@
+[
+    {"Project": "Project 1"   , "Subject": "Alpha"    ,  "Time" : "09:15"  , "Comment": "2400", "WeekNumber": "3" , "Date": "20170325"},
+    {"Project": "Project 1"   , "Subject": "Beta"     ,  "Time" : "10:00"  , "Comment": "150" , "WeekNumber": "3" , "Date": "20170401"},
+    {"Project": "Project 1"   , "Subject": "Alpha"    ,  "Time" : "09:30"  , "Comment": "4"   , "WeekNumber": "3" , "Date": "20170327"},
+    {"Project": "Project 1"   , "Subject": "Alpha"    ,  "Time" : "09:15"  , "Comment": "44"  , "WeekNumber": "3" , "Date": "20170325"},
+    {"Project": "Project 1"   , "Subject": "Gama"     ,  "Time" : "09:30"  , "Comment": "22"  , "WeekNumber": "3" , "Date": "20170325"},
+    {"Project": "Project 1"   , "Subject": "Beta"     ,  "Time" : "09:15"  , "Comment": "4"   , "WeekNumber": "3" , "Date": "20170325"},
+    {"Project": "Project 2"   , "Subject": "Teta"     ,  "Time" : "10:00"  , "Comment": "44"  , "WeekNumber": "3" , "Date": "20170326"},
+    {"Project": "Project 2"   , "Subject": "Epsilon"  ,  "Time" : "09:30"  , "Comment": "22"  , "WeekNumber": "3" , "Date": "20170326"},
+    {"Project": "Project 2"   , "Subject": "Teta"     ,  "Time" : "09:15"  , "Comment": "R1"  , "WeekNumber": "3" , "Date": "20170325"},
+    {"Project": "Project 2"   , "Subject": "Epsilon"  ,  "Time" : "09:30"  , "Comment": "R2"  , "WeekNumber": "3" , "Date": "20170327"},
+    {"Project": "Project 2"   , "Subject": "Epsilon"  ,  "Time" : "09:15"  , "Comment": "44"  , "WeekNumber": "3" , "Date": "20170327"},
+    {"Project": "Project 2"   , "Subject": "Teta"     ,  "Time" : "10:00"  , "Comment": "22"  , "WeekNumber": "3" , "Date": "20170325"}
+  ]
+

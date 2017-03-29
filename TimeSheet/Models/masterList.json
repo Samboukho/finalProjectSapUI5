@@ -1,7 +1,8 @@
 {
 	"MainMenu":[
-		{"icon" : "sap-icon://home" 		,"text" : "Home"		, "id" : "Home"},
-		{"icon" : "sap-icon://calendar"		,"text" : "Calendar"	, "id" : "Calendar"}
+		{"icon" : "sap-icon://home" 				,"text" : "Home"		, "id" : "Home"		,"PageNumber"	:	7},
+		{"icon" : "sap-icon://calendar"				,"text" : "Calendar"	, "id" : "Calendar"	,"PageNumber"	:	0},
+		{"icon" : "sap-icon://message-popup"		,"text" : "Message"		, "id" : "Message"	,"PageNumber"	:	1}
 		
 	],
 	"MostUsed":[

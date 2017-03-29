@@ -40,12 +40,15 @@ sap.ui.define([
 				if ( login[i].Username == username && login[i].Password == password ) {
 					login[i].log = "true";
 					this.getView().getModel( "userLog" ).setData( login[i] );
-					var router 			= 	sap.ui.core.UIComponent.getRouterFor( this.getView() );
-					router.navTo("Detail",{ "Article": username}, false);
+					this.navigationTo("Detail",{ "Article": username}, false);
 				}
 			}
 
-		}
+		},
+		navigationTo: function ( Page, Parameter, Bool ) {
+			var router 			= 	sap.ui.core.UIComponent.getRouterFor( this.getView() );
+			router.navTo( Page, Parameter, Bool );
+		},
 
 
 	});
