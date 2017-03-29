@@ -1,0 +1,208 @@
+.XCArielBackGround {
+    background-image: url(images/arielBackground2.jpg);
+    background-position: center;
+    background-size:cover;
+}
+.XCAppFooter {
+    bottom: 45px    !important;
+}
+ /*.XCAppShell .sapMShellCentralBox  {
+    width:          1500px  !important;
+    margin-left:    -750px  !important;
+}*/
+.XCBoldText {
+    font-weight:                    bold;
+}
+.sapUiUfdShellAnim .sapUiUfdShellHeadCenter.sapUiUfdShellAnim {
+    -webkit-transition-duration:    0ms;
+    transition-duration:            0ms;
+    -moz-transition-duration:       0ms;
+    -webkit-transition-delay:       0ms;
+    transition-delay:               0ms;
+    -moz-transition-delay:          0ms;
+}
+.sapUiUfdSpltContCntnt {
+    overflow:                       hidden;
+}
+.sapUiUfdSpltContH .sapUiUfdSpltContPane {
+    border-right:                   none;
+}
+.XCNotifNoMargin .sapMObjectIdentifierTextBellow {
+    margin-top:                     0px !important;
+}
+.XCTileNoBg.sapSuiteGT {
+    background:                     transparent !important;
+    box-shadow:                     none !important;
+}
+/*.sap-desktop ::-webkit-scrollbar {
+    width:                          8px;
+    height:                         8px;
+    background-color:               transparent;
+}*/
+/*.sap-desktop ::-webkit-scrollbar-thumb {
+    background-color: #7E8488;
+}*/
+/*.sap-desktop ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}*/
+/*.sapUiUfdShellAnim .sapUiUfdShellHeadCenter.sapUiUfdShellAnim {
+    left: 114px !important;
+    text-align: left;
+}
+.sapUiView {
+    display: block;
+    height: 100%;
+}
+.sapUiDlgGrip {
+    z-index: 2;
+}
+.sapUiDlgCont {
+    bottom: 0 !important;
+    height: initial !important;
+}
+.sapUiUfdShellSearch {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+}/*
+.neptuneTopTitle {
+    font-size: 1rem;
+    color: #666666;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.sapUiUfdShellHeadItm>span>img {
+    margin-top: 0;
+    width: 34px;
+    height: 34px;
+}
+.neptuneTopToolbar {
+    height: 40px;
+    background: transparent;
+    border-bottom: none
+}*/
+.MainMasterPage .sapMITBArrowScroll {
+    display:                        none;
+}
+.MainMasterPage li.sapMLIBNoFlex.sapMLIB > .sapMLIBSelectSM + .sapMLIBContent,
+li.sapMLIBNoFlex.sapMLIB >:first-child.sapMLIBContent {
+    padding-left:                   0;
+}
+.MainMasterPage .sapMTextLineClamp {
+    color:                          white;
+    font-size:                      20px;
+    margin-top:                     5px;
+}
+.MainMasterPage .sapMImg {
+    border-radius:                  30px;
+}
+.MainMasterPage .sapMOH {
+    margin:                         0;
+    padding:                        5px 5px 0 5px;
+}
+.MainMasterPage .sapMOHTitle {
+    color:                          #fff !important;
+    font-size:                      18px !important;
+    padding-top:                    5px;
+}
+.MainMasterPage .sapMListInsetBG {
+    padding:                        5px;
+    margin-top:                     5px;
+}
+.MainMasterPage .sapMIBar {
+    background:                     transparent !important;
+}
+.MainMasterPage .sapMListHdr {
+    color:                          #ccc;
+    border:                         none;
+    font-size:                      14px;
+    text-shadow:                    none;
+}
+.MainMasterPage .sapMITBTextOnly .sapMITBFilterDefault>.sapMITBText {
+    color:                          white !important;
+    text-shadow:                    none;
+}
+.MainMasterPage .sapMLIB {
+    cursor:                         pointer;
+    border-bottom:                  none;
+    margin-bottom:                  5px;
+}
+.XCLeftMenuList .sapMLIBSelected {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.MainMasterPage .sapMListBGSolid .sapMLIB {
+    background-color:               rgba(0, 0, 0, 0.2);
+    color:                          #ffffff;
+}
+.MainMasterPage .sapMList .sapMLIB.sapMGHLI {
+    background:                     transparent;
+    color:                          #ffffff;
+    padding:                        0 0 0 15px;
+    margin-top:                     10px;
+}
+.MainMasterPage .sapMList .sapMLIB.sapMGHLI:hover {
+    background:                     transparent !important;
+}
+.MainMasterPage .sapMList .sapMLIB.sapMGHLI:focus {
+    outline:                        none;
+}
+.MainMasterPage .sapMSLI {
+    height:                         3rem;
+}
+.MainMasterPage .sapUiIcon {
+    background:                     rgba(0, 0, 0, 0.4);
+    color:                          #fff !important;
+    width:                          3rem;
+}
+.MainMasterPage .sapMSLITitleOnly {
+    font-size:                      14px;
+    color:                          #fff;
+    padding-left:                   10px;
+}
+.MainMasterPage .sapMSLITitle {
+    font-size: 14px;
+    color: #fff;
+    padding-left: 10px;
+}
+.MainMasterPage .sapMSLIDescription {
+    font-size: 12px;
+    color: #ccc;
+    padding-left: 10px;
+    white-space:inherit;
+}
+.MainMasterPage .sapMLIBCounter {
+    font-size: 1rem;
+    color: #ccc;
+}
+.MainMasterPage .sapMLIB:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.MainMasterPage .sapMITBSelected>.sapMITBContentArrow {
+    border-bottom-color: #ffffff;
+}
+.MainMasterPage .sapMITBContent {
+    padding: 0;
+    background: transparent;
+}
+.MainMasterPage .sapMSLITitle,
+.sapMSLITitleOnly,
+.sapMSLIDescription {
+    white-space: normal;
+}
+.MainMasterPage .sapMITBContainerContent {
+    border-bottom: none;
+}
+.MainMasterPage .sapMITBScrollContainer {
+    margin-right: 0;
+    margin-left: 0;
+    overflow-x: initial;
+}
+.MainMasterPage .sapMFooter-CTX .sapMSegBBtn {
+    background-color: rgba(0, 0, 0, 0.2);
+    min-width: 82px !important;
+}
+.MainMasterPage .sapMFooter-CTX .sapMSegBBtn.sapMBtnActive,
+.sapMFooter-CTX .sapMSegBBtn.sapMSegBBtnSel {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+*/

@@ -1,0 +1,109 @@
+<mvc:View		height 			=	"100%"
+				xmlns:core 		=	"sap.ui.core"
+				xmlns:layout	= 	"sap.ui.layout"
+				xmlns:mvc 		=	"sap.ui.core.mvc"
+				xmlns 			=	"sap.m"
+				xmlns:uxap		= 	"sap.uxap"
+				controllerName 	=	"sap.ui.project.timeSheet.Controller.Detail"
+				xmlns:s 		=	"sap.m.semantic"
+				xmlns:ui 		=	"sap.ca.ui"
+				xmlns:u 		=	"sap.ui.unified"
+				xmlns:st		=	"sap.suite.ui.commons"
+				xmlns:forms 	= 	"sap.ui.layout.form"
+				showHeader		= 	"false">
+
+	<u:Shell id="myShell"
+			icon="images/Ariel_University_logo-2-1.png">
+			<u:headItems>
+				<u:ShellHeadItem
+					tooltip="Configuration"
+					icon="sap-icon://menu2"
+					press="handleShowMaster" />
+			</u:headItems>
+			<!-- <u:ariaLabelledBy id = "oLabel"/> -->
+				
+			<u:headEndItems>
+				<u:ShellHeadItem
+					icon="sap-icon://log"
+					tooltip="Logoff"
+					press="handleLogoffPress" />
+			</u:headEndItems>
+			<!-- <u:curtainContent>
+				<Label id = "oLabel"/>
+			</u:curtainContent> -->
+			<u:user>
+				<u:ShellHeadUserItem
+					image="sap-icon://person-placeholder"
+					username="{userLog>/FamilyName} {userLog>/Name}"
+					press="handleUserItemPressed" />
+			</u:user>
+			<u:search>
+				<!-- <SearchField
+					search="handleSearchPressed"/> -->
+					<Text 	id 			=	"oLabel"
+							textAlign  	=	"Center"
+							class 		=	"sapUiLargeMarginBegin"/>
+			</u:search>
+		</u:Shell>	
+	<u:SplitContainer 	showSecondaryContent 	=	"true" 
+						id 						= 	"SplitPage"
+						showHeader				= 	"false"
+						showFooter 				= 	"false"
+						mode					=	"HideMode"
+						class					= 	"sapUiLargeMarginTop">
+		<u:secondaryContent id 					=	"masterId">
+			<Page 				showFooter 		=	"false"
+								showHeader 		= 	"false"
+								enableScrolling = 	"true"
+								backgroundDesign= 	"Standard"
+								id 				=	"MainMasterPage">
+				<Toolbar 		design 			=	"Solid">
+					<Button 	icon 			=	"sap-icon://arrow-left"
+								type 			=	"Transparent"
+								press 			=	"handleNavButtonPress"/>
+					<ToolbarSpacer/>
+					<Text 		text 			= 	"recette(4)"/>
+					<ToolbarSpacer/>
+					<Button 	icon 			=	"sap-icon://menu"
+								type 			=	"Transparent"/>
+				</Toolbar>
+				
+				<SearchField 	search 			=	"handleSearch"
+				    			width			=	"100%" 
+				    			class 			=	"sapUiNoMarginTop"/>
+
+				<List 			backgroundDesign= 	"Solid"
+								items 			=	"{MasterList>/MainMenu}" 
+								mode 			= 	"SingleSelectMaster"
+								id 				=	"masterList"
+								itemPress 		=	"NavToView"> 
+					
+					<StandardListItem 	title 	=	"{MasterList>text}"
+										counter = 	"{MasterList>Quantity}"
+										icon 	=	"{MasterList>icon}"
+										type 	=	"Active"/>
+				</List>
+			
+			</Page>
+		</u:secondaryContent>
+		<u:content 		id 				= 	"Detail"
+						enableScrolling = 	"true">
+			<NavContainer 	id 			=	"navCon"
+							class		=	"navContainerControl sapUiSmallMarginBottom">
+				<Page 		id 			=	"p1"
+							title		=	"TimeSheet" >
+					<core:Fragment 	fragmentName	=	"sap.ui.project.timeSheet.DetailViewFragment.CalendarPage" 
+									type 			=	"XML" 
+									id 				=	"DetailPage"/>
+				</Page>
+				<Page 		id 			=	"p2"
+							title		=	"Page 2" >
+					<core:Fragment 	fragmentName	=	"sap.ui.project.timeSheet.DetailViewFragment.Message" 
+									type 			=	"XML" 
+									id 				=	"DetailPage"/>
+				</Page>
+ 			</NavContainer>
+
+		</u:content>
+	</u:SplitContainer>
+</mvc:View>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>TimeSheet</title>
+		<link href="images/ariel.ico" rel="shortcut icon" type="image/x-icon">
+		<script charset						= "utf-8"
+           		id 							= "sap-ui-bootstrap"
+				src 						= "https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+				data-sap-ui-libs 			= "sap.m"
+				data-sap-ui-theme 			= "sap_bluecrystal"
+				data-sap-ui-modules			= "sap.m.library"
+				data-sap-ui-compatVersion	= "edge"
+				data-sap-ui-preload			= "async"
+            	data-sap-ui-resourceroots	= '{"sap.ui.project.timeSheet": "./"}'>
+    </script>
+
+		<!-- Application launch configuration -->
+		<script>
+
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					appWidthLimited: true,
+					app: new sap.ui.core.ComponentContainer({
+						height: "100%",
+						name: 	"sap.ui.project.timeSheet"
+					})
+				}).placeAt("content");
+			});
+			// 	new sap.m.App ({
+			// 		pages: [
+			// 			new sap.m.Page({
+			// 				title: "Time sheet", 
+			// 				showHeader: false,
+			// 				showFooter: true,
+			// 				enableScrolling : false,
+			// 				content: [ new sap.ui.core.ComponentContainer({
+			// 					height : "100%", name : "sap.ui.project.timeSheet"
+			// 				})]
+			// 			})
+			// 		]
+			// 	}).placeAt("content");
+			// });
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<!-- UI Content -->
+	<body class="sapUiBody" id="content" role="application">
+	</body>
+
+</html>

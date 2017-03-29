@@ -1,0 +1,19 @@
+{
+	"MainMenu":[
+		{"icon" : "sap-icon://home" 				,"text" : "Home"		, "id" : "Home"		,"PageNumber"	:	7},
+		{"icon" : "sap-icon://calendar"				,"text" : "Calendar"	, "id" : "Calendar"	,"PageNumber"	:	0},
+		{"icon" : "sap-icon://message-popup"		,"text" : "Message"		, "id" : "Message"	,"PageNumber"	:	1}
+		
+	],
+	"MostUsed":[
+		{"icon" : "sap-icon://product","text" : "text", "id" : "homeScreen"},
+		{"icon" : "sap-icon://order-status","text" : "Orders monitor", "id" : "FinancialDashboard"},
+		{"icon" : "sap-icon://shipping-status","text" : "Inbound delivery", "id" : "RevenueGrowthRate"},
+		{"icon" : "sap-icon://sales-order","text" : "BLABLABLA", "id" : "SalesDashboard"}
+	],
+	"Favorites":[
+		{"icon" : "sap-icon://inventory","text" : "Inventory dashboard", "id" : "InventoryDashboard"},
+		{"icon" : "sap-icon://leads","text" : "HR dashboard", "id" : "HRDashboard"},
+		{"icon" : "sap-icon://post","text" : "E-Commerce dashboard", "id" : "ECommerceDashboard"}
+	]
+}

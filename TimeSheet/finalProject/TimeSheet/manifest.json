@@ -1,0 +1,125 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "TimeSheet",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.38.00"
+		},
+		"dataSources": {
+			
+		},
+		"crossNavigation": {
+			"inbounds": {}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.project.timeSheet.View.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38.0",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.38.0"
+				},
+				"sap.ui.core": {
+					"minVersion": "1.38.0"
+				},
+				"sap.ushell": {
+					"minVersion": "1.38.0"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui.project.timeSheet.i18n.i18n"
+				}
+			}
+			
+		},
+		"resources": {
+					},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.project.timeSheet.View",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+					"name": "Overview",
+					"pattern": "",
+					"target": [
+						"Overview"
+					]
+				},
+				{
+					"name": "Detail",
+					"pattern": "Detail/{Article}",
+					"target": [
+						"Detail"
+					]
+				}
+			],
+			"targets": {
+				"Overview": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewLevel": 1,
+					"viewName": "Overview",
+					"title": "Overview",
+					"viewId": "Overview"
+				},
+				"Detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewLevel": 2,
+					"viewName": "Detail",
+					"title": "Detail view",
+					"viewId": "Detail"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+<core:View		height 			=	"100%"
+				xmlns:core 		=	"sap.ui.core"
+				xmlns:l			= 	"sap.ui.layout"
+				xmlns:form		=	"sap.ui.layout.form"
+				xmlns:mvc 		=	"sap.ui.core.mvc"
+				xmlns 			=	"sap.m"
+				controllerName 	=	"sap.ui.project.timeSheet.Controller.Overview"
+				xmlns:s 		=	"sap.m.semantic"
+				xmlns:ui 		=	"sap.ca.ui"
+				xmlns:u 		=	"sap.ui.unified"
+				xmlns:st		=	"sap.suite.ui.commons"
+				class 			=	"XCArielBackGround"
+				showHeader		= 	"false">
+	<Page 		title 			=	"Time sheet Application">
+		
+			<form:SimpleForm 	width 			=	"100%"
+								maxContainer 	=	"3"
+								layout 			=	"ResponsiveLayout"
+								class 			=	"sapUiLargeMarginTop">
+				<Label 			text 	 		=	""
+								class 			=	"sapUiLargeMarginTop"/>
+				<Input 			placeholder 	=	"Username"
+								width 			=	"50%"
+								class 			=	"sapUiLargeMarginTop"
+								id 				=	"usernameInput"/>
+
+				<Label 			text 	 		=	""/>
+				<Input 			placeholder 	=	"Password"
+								width 			=	"50%"
+								type 			=	"Password"
+								id 				=	"passwordInput"/>
+
+				<Label 			text 	 		=	""/>
+				<FlexBox 		width 			=	"50%"
+								height 			=	"100px"
+								alignItems		=	"Start"
+								justifyContent 	=	"Center">
+					
+						<Button			text 		 	=	"Login"
+										width 			=	"100%"
+										press 			=	"onLoginPress"/>
+						<Button			text 		 	=	"Sign-in"
+										width 			=	"100%"/>
+					
+				</FlexBox>
+
+
+			</form:SimpleForm>
+	
+
+	</Page>
+
+	
+</core:View>

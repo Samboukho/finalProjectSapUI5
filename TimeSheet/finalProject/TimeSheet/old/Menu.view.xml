@@ -1,0 +1,383 @@
+<mvc:View 	height 			=	"100%"
+			xmlns:core 		=	"sap.ui.core"
+			xmlns:l			= 	"sap.ui.layout"
+			xmlns:mvc 		=	"sap.ui.core.mvc"
+			xmlns 			=	"sap.m"
+			xmlns:t 		=	"sap.ui.table"
+			controllerName 	=	"sap.ui.project.timeSheet.Controller.Menu"
+			xmlns:s 		=	"sap.m.semantic"
+			xmlns:ui 		=	"sap.ca.ui"
+			xmlns:u 		=	"sap.ui.unified"
+			xmlns:st		=	"sap.suite.ui.commons"
+			xmlns:c			=	"sap.ui.commons">
+
+	<Page 	id 				=	"menu"
+			class 			= 	"sapMGlobalBackgroundColorStrong"
+			showHeader 		= 	"false"
+			showFooter 		= 	"false">		
+		<l:Grid defaultSpan="L2 M2 S2" class="sapUiLargeMarginTop">
+			<l:content>
+
+
+					<!-- <layoutData>
+						<l:GridData span="L4 M4 S4" />
+					</layoutData> -->
+
+					<st:GenericTile header 		=	"Latest emails" 
+									size		=	"L" 
+									frameType	= 	"TwoByOne"
+									press		=	"press"
+									class		=	"sapUiSmallMargin"
+									headerImage = 	"sap-icon://email">
+
+						<st:tileContent >
+									
+							<st:TileContent size	=	"M"
+											footer 	=	"2 New Mails"
+											class 	= "xcuiInputNoMargin">
+								<st:content class 	= "xcuiInputNoMargin">
+									<ScrollContainer 		class = "xcuiInputNoMargin"
+											 				vertical = "true"
+											 				width = "400px"
+											 				focusable = "true">
+											<ObjectIdentifier title = "From: SAP Notification center" text = "Customer status change – 0017048/2016" class = "XCNotifNoMargin"/>
+											<ObjectIdentifier title = "From: Ohad Fare" text = "OSS- report status" class = "XCNotifNoMargin"/>
+
+<!-- 											<ObjectNumber number = "From: SAP Notification center" unit = "Customer status change – 0017048/2016" /> -->
+<!-- 											<ObjectNumber number = "From: Ohad Fare" unit = "OSS- report status" /> -->
+									
+										</ScrollContainer>	
+									
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+				
+						
+				
+					<!-- <layoutData>
+						<l:GridData span="L4 M4 S4" />
+					</layoutData> -->
+				
+					<st:GenericTile header 		=	"Notification - Alert" 
+									size		=	"L" 
+									frameType	= 	"TwoByOne"
+									press		=	"press"
+									class		=	"sapUiSmallMargin"
+									headerImage = 	"sap-icon://notification-2">
+						<st:tileContent>
+							<st:TileContent size	=	"L"
+											footer 	=	"2 New Notification">
+								<st:content>
+									<VBox>
+										<ScrollContainer width = "400px">
+											<ObjectIdentifier title = "Dan H." text = "Price change request" class = "XCNotifNoMargin"/>
+											<ObjectIdentifier title = "Ron" text = "Purchasing order approval" class = "XCNotifNoMargin"/>
+											<!-- <ObjectNumber number = "Dan H." unit = "Price change request"/>
+											<ObjectNumber number = "Ron" unit = "Purchasing order approval" /> -->
+										</ScrollContainer>	
+									</VBox>
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+				
+
+				<st:GenericTile 	header 		=	"Profit Margin" 
+									size		=	"L" 
+									frameType	=	"OneByOne"
+									press		=	"press"
+									class		= 	"sapUiSmallMargin">
+					<st:tileContent>
+						<st:TileContent size	=	"M">
+							<st:content>
+								<st:NumericContent size="S" scale="%" indicator="Up" value="24.5" valueColor="Good" icon="sap-icon://line-chart" />
+							</st:content>
+						</st:TileContent>
+					</st:tileContent>
+				</st:GenericTile>
+
+				<st:GenericTile 	header 		=	"Inventory value in days" 
+									size		=	"L" 
+									frameType	=	"OneByOne"
+									press		=	"press"
+									class		= 	"sapUiSmallMargin">
+					<st:tileContent>
+						<st:TileContent size	=	"M">
+							<st:content>
+								<st:NumericContent 	size="S" scale="Days" value="39" indicator="Down" valueColor="Error" icon="sap-icon://pie-chart" />
+							</st:content>
+						</st:TileContent>
+					</st:tileContent>
+				</st:GenericTile>
+
+				
+					<!-- <layoutData>
+						<l:GridData span="L4 M4 S4" />
+					</layoutData> -->
+					<st:GenericTile 			header 		=	"Sales vs Forecast" 
+												size		=	"L" 
+												frameType	=	"TwoByOne"
+												press		=	"press"
+												class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M"
+											footer 	=	"Hourly">
+								<st:content>
+									<!-- <st:NumericContent 	size="S" scale="%" value="88" valueColor="Error" icon="sap-icon://time-overtime" /> -->
+									<ProgressIndicator 	class="sapUiSmallMarginBottom"
+														percentValue="51"
+														displayValue="102%"
+														showValue="true"
+														state="Success" 
+														height 	=	"50px"/>
+								</st:content>
+							</st:TileContent>
+							<st:TileContent size="M"
+											footer 	=	"Daily">
+								<st:content>
+									<ProgressIndicator 	class="sapUiSmallMarginBottom"
+														percentValue="44"
+														displayValue="88%"
+														showValue="true"
+														state="Error" 
+														height 	=	"50px"/>
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+				
+
+<!-- 				
+					<layoutData>
+						<l:GridData span="L4 M4 S4" />
+					</layoutData> -->
+				<st:GenericTile 	
+									size		=	"L" 
+									frameType	=	"OneByOne"
+									press		=	"press"
+									class		= 	"XCTileNoBg sapUiSmallMargin">
+					<st:tileContent>
+ 						<st:TileContent size	=	"L">
+							<st:content>
+								<Image		src			=   "images/coop.png"
+											densityAware=	"false"/>
+							</st:content>
+						</st:TileContent>
+					</st:tileContent>
+				</st:GenericTile>
+				<st:GenericTile 	header 		=	"Powered by" 
+					size		=	"L" 
+					frameType	=	"OneByOne"
+					press		=	"press"
+					class		= 	"XCTileNoBg sapUiSmallMargin">
+					<st:tileContent>
+ 						<st:TileContent size	=	"M">
+							<st:content>
+								<Image		src			=   "images/sap.png"
+											width 		= 	"155px"
+											densityAware=	"true"/>
+							</st:content>
+						</st:TileContent>
+					</st:tileContent>
+				</st:GenericTile>
+
+				<!--  -->
+				<!-- <st:GenericTile 			header 		=	"Sales vs Forecast daily" 
+											size		=	"L" 
+											frameType	=	"OneByOne"
+											press		=	"press"
+											class		= 	"sapUiSmallMargin">
+					<st:tileContent>
+						<st:TileContent size	=	"M">
+							<st:content>
+								<st:NumericContent 	size="S" indicator="Up" value="45" scale="%" valueColor="Good" icon="sap-icon://time-overtime" />
+							</st:content>
+						</st:TileContent>
+					</st:tileContent>
+				</st:GenericTile> -->
+
+
+
+				<!-- 					
+					<layoutData>
+						<l:GridData span="L6 M6 S6" />
+					</layoutData>								 
+					<t:Table 	rows					=	"{List>/tableData}"
+								class					= 	"sapUiSmallMargin"
+								selectionMode			=	"Single" 
+								editable				=	"false" 
+								enableCellFilter 		=	"true"
+								selectionBehavior 		= 	"RowOnly"
+								minAutoRowCount			=	"3"
+								visibleRowCount	 		=	"4">
+
+						<t:columns>
+						
+							<t:Column >
+								<Label text 	=	"Stores" />
+								<t:template>
+									<Text text 	=	"{List>Stores}"/>
+								</t:template>
+							</t:Column>
+						
+							<t:Column>
+								<Label text 	=	"Forecast" />
+								<t:template>
+									<Text text 	=	"{List>Forecast}"/>
+								</t:template>
+							</t:Column>
+						
+							<t:Column>
+								<Label text 	=	"Sales" />
+								<t:template>
+									<Text text 	=	"{List>Sales}"/>
+								</t:template>
+							</t:Column>
+						
+						</t:columns>
+					</t:Table>
+				 -->
+				
+	
+
+					
+
+<!-- 					
+						<layoutData>
+							<l:GridData span="L4 M4 S4" />
+						</layoutData> -->
+						<st:GenericTile 	header 		=	"Dairy cart" 
+											subheader 	=	"Price vs. Supersal Deal"
+											size		=	"L" 
+											frameType	=	"OneByOne"
+											press		=	"press"
+											class		= 	"sapUiSmallMargin">
+							<st:tileContent>
+								<st:TileContent size	=	"M"
+												id 		=	"Cart1">
+									<st:content>
+										<st:NumericContent size="S" scale="%" value="101" valueColor="Error" icon="sap-icon://cart" />
+									</st:content>
+								</st:TileContent>
+							</st:tileContent>
+						</st:GenericTile>
+					<!--  -->
+
+					<st:GenericTile 	header 		=	"Fruits/Vegetables" 
+										subheader 	=	"Price vs. Supersal Deal"
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M"
+											id 		=	"Cart2">
+								<st:content>
+									<st:NumericContent size="S" scale="%" value="98" valueColor="Good" icon="sap-icon://cart" />
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+
+					<st:GenericTile 	header 		=	"Average cart cost" 
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M"
+											id 		=	"AverageCart">
+								<st:content>
+									<st:NumericContent size="S" scale="EUR" value="143.40" indicator="Up" valueColor="Good" icon="sap-icon://cart-full" />
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+
+					<st:GenericTile 	header 		=	"CRM" 
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M">
+								<st:content>
+									<st:NumericContent 	size="S" indicator="Down" value="40" valueColor="Good" icon="sap-icon://crm-sales"/>
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+
+					<st:GenericTile 	header 		=	"Number of customers" 
+										subheader 	= 	"Up to date"
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M">
+								<st:content>
+									<st:NumericContent size="S" scale="M" value="1.548" valueColor="Good" icon="sap-icon://customer-briefing"/>
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+
+					<st:GenericTile 	header 		=	"Current employees"
+										subheader 	= 	"Head count vs. budget" 
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M">
+								<st:content>
+									<st:NumericContent size="S" scale = "287"  value="300/" valueColor="Error" icon="sap-icon://employee" />
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+
+					<st:GenericTile 	header 		=	"Add a new KPI" 
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"sapUiSmallMargin">
+						<st:tileContent>
+							<st:TileContent size	=	"M">
+								<st:content>
+									<core:Icon size="50px" src="sap-icon://add"/>
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile>
+
+<!-- 					<st:GenericTile 	size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"XCTileNoBg sapUiSmallMargin">
+						<st:tileContent>
+						</st:tileContent>
+					</st:GenericTile>
+ -->
+<!-- 					<st:GenericTile 	header 		=	"Powered by" 
+										size		=	"L" 
+										frameType	=	"OneByOne"
+										press		=	"press"
+										class		= 	"XCTileNoBg sapUiSmallMargin">
+						<st:tileContent>
+	 						<st:TileContent size	=	"M">
+								<st:content>
+									<Image		src			=   "images/sap.png"
+												width 		= 	"155px"
+												densityAware=	"true"/>
+								</st:content>
+							</st:TileContent>
+						</st:tileContent>
+					</st:GenericTile> -->
+
+			</l:content>
+		</l:Grid>
+	</Page>		
+</mvc:View>
